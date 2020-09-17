@@ -1328,6 +1328,7 @@ transform: rotate(180deg);
     }
     .bannerBg{
         clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+        -webkit-clip-path:polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
     }
     .link-item{
         display: none;
