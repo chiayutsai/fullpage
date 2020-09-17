@@ -1,9 +1,11 @@
 var myFullpage = new fullpage('#fullpage', {
     anchors: ['Homepage', 'ADs', 'SocialMarketing', 'SearchEngine', 'WebDesign', 'AboutUs', 'ChooseUs', 'mailForm', 'ContactUs'],
 
+
     navigation: true,
     navigationPosition: 'right',
     navigationTooltips: ['Homepage', 'ADs', 'SocialMarketing', 'SearchEngine', 'WebDesign', 'AboutUs', 'ChooseUs', 'mailForm', 'ContactUs'],
+
     responsiveWidth: 577,
     onLeave: function (origin, destination, direction) {
         var leavingSection = this;
