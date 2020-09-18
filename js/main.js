@@ -1,3 +1,9 @@
+jQuery(document).ready(function () {
+    jQuery(window).on('load', function () {  //load函数
+        jQuery("#loading").hide();
+    });
+});
+
 var myFullpage = new fullpage('#fullpage', {
     anchors: ['Homepage', 'ADs', 'SocialMarketing', 'SearchEngine', 'WebDesign', 'AboutUs', 'ChooseUs', 'mailForm', 'ContactUs'],
 
@@ -119,7 +125,7 @@ $(window).scroll(function () {
 });
 
 
-if (wdth < 577) {
+if (wdth <= 770) {
     $('.navbar-toggler').click(function () {
         $(this).css('display', 'none')
         $('.section').addClass('rotateNav');
@@ -129,3 +135,25 @@ if (wdth < 577) {
 
 }
 
+var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+})

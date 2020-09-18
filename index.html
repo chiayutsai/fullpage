@@ -10,19 +10,28 @@
 
     <meta name="description" content="凱斯東數位行銷有限公司量身您打造品牌知名度，提供多樣化的行銷策略，有效的行銷方案，瞄準正確的顧客群，打造專屬於您的行銷策略">
     <meta property=" og:type" content="website">
-
+    <meta name="format-detection" content="telephone=no" />
     <meta property="og:title" content="凱斯東數位行銷">
     <meta property="og:description" content="凱斯東數位行銷有限公司量身您打造品牌知名度，提供多樣化的行銷策略，有效的行銷方案，瞄準正確的顧客群，打造專屬於您的行銷策略">
     <meta property="og:image" content="image/item.jpg">
     <!-- CSS -->
     <link rel="stylesheet" href="css/fullpage.css">
+
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="css/style.css" rel='stylesheet' />
 
 </head>
 
 <body>
-
+    <div id="loading">
+        <div class="Box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     <nav class="nav">
         <div class="close"></div>
         <ul class="navbar-nav">
@@ -57,21 +66,85 @@
 
             <div class="section banner Homepage ">
                 <div class="bannerBg"></div>
-                <div class="slide">
-                    <di class="intro">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide adSlider">
+                            <div class="carousel_box">
+                                <div class="carousel_img">
+                                    <div> <img src="image/a.png" alt=""></div>
+                                    <div> <img src="image/d.png" alt=""></div>
+                                    <div> <img src="image/s.png" alt=""></div>
+                                </div>
+                                <div class="carousel_text">
+                                    <h3>數位廣告行銷</h3>
+                                    <div class="carousel_line"></div>
+                                    <p>精準的策略與操作手法，<br>
+                                        有效地吸引到正確的顧客群。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide seoSlider">
+                            <div class="carousel_box">
+                                <div class="carousel_img">
+                                    <div> <img src="image/seo_s.png" alt=""></div>
+                                    <div> <img src="image/seo_e.png" alt=""></div>
+                                    <div> <img src="image/seo_o.png" alt=""></div>
+                                </div>
+                                <div class="carousel_text">
+                                    <h3>搜尋引擎優化</h3>
+                                    <div class="carousel_line"></div>
+                                    <p>提升網路上能見度，加深信任感，<br>
+                                        提升公司品牌曝光機會。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide socialSlider">
+                            <div class="carousel_box">
+                                <div class="carousel_img">
+                                    <div>
+                                        <img src="image/social_s.png" alt=""></div>
+                                    <div><img src="image/social_o.png" alt=""></div>
+                                    <div><img src="image/socail_c.png" alt=""></div>
+                                    <div><img src="image/socail_i.png" alt=""></div>
+                                    <div><img src="image/social_a.png" alt=""></div>
+                                    <div><img src="image/social_l.png" alt=""></div>
+                                </div>
+                                <div class="carousel_text">
+                                    <h3>社群行銷策略</h3>
+                                    <div class="carousel_line"></div>
+                                    <p>透過社群擴散，打造品牌知名度，<br>掌握社群趨勢擴散品牌廣告。</p>
 
-                        <p>ADs</p>
-                    </di>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide designSlider">
+                            <div class="carousel_box">
+                                <div class="carousel_img">
+                                    <div><img src="image/design_d.png" alt=""></div>
+                                    <div><img src="image/design_e.png" alt=""></div>
+                                    <div><img src="image/design_s.png" alt=""></div>
+                                    <div><img src="image/design_i.png" alt=""></div>
+                                    <div><img src="image/design_g.png" alt=""></div>
+                                    <div><img src="image/design_n.png" alt=""></div>
+                                </div>
+                                <div class="carousel_text">
+                                    <h3>網頁設計製作</h3>
+                                    <div class="carousel_line"></div>
+                                    <p>建立品牌網站符合顧客使用需求，<br>
+                                        良好的瀏覽體驗，增加消費者的好感度。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Add Pagination -->
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"><i class="fas fa-play"></i></div>
+                    <div class="swiper-button-next"><i class="fas fa-play"></i></div>
+
                 </div>
-                <div class="slide">
-                    <p>SEO</p>
-                </div>
-                <div class="slide">
-                    <p>SOCIAL</p>
-                </div>
-                <div class="slide">
-                    <p>DESIGN</p>
-                </div>
+
             </div>
             <div class="section service ADs  ">
                 <div class="bg"></div>
@@ -353,6 +426,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.1/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.1/plugins/animation.gsap.js"></script>
