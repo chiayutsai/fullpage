@@ -1365,6 +1365,9 @@ pointer-events: ;
     .choice .archor{
         width: 24%;
     }
+    .hover_icon{
+        top: 140px;
+    }
     .submitBtn {
         width: 35%;
     }
@@ -1607,7 +1610,9 @@ pointer-events: ;
         margin-top: 0;
         width: 30%;
     }
-
+    .hover_icon{
+        top: 110px;
+    }
     input,select, option{
         height: 36px;
     }
