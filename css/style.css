@@ -1061,6 +1061,11 @@ p.extra{
     color:var(--lightColor);
    left: 30px;
 }
+ .submitBtn .sendEmail i{
+    font-size: 24px;
+    left: -50px;
+}
+
 /* traffic */
 .traffic{
     position: relative;
@@ -1183,6 +1188,7 @@ font-size: 14px;
 line-height: normal;
 writing-mode:vertical-rl;
 transform: rotate(180deg);
+pointer-events: ;
 }
 
 
@@ -1878,7 +1884,7 @@ transform: rotate(180deg);
 
 @media screen and (max-width:414px){
     .logo{
-        width:60%;
+        width:55%;
     }
     .close {
         top: 20px;

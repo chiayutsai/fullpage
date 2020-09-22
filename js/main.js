@@ -10,7 +10,7 @@ var myFullpage = new fullpage('#fullpage', {
 
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['Homepage', 'ADs', 'SocialMarketing', 'SearchEngine', 'WebDesign', 'AboutUs', 'ChooseUs', 'mailForm', 'ContactUs'],
+    navigationTooltips: ['首頁', '數位廣告行銷', '社群行銷', '搜尋引擎優化', '網頁設計製作', '關於凱斯東', '選擇凱斯東', '品牌行銷規劃', '聯絡我們'],
 
     responsiveWidth: 770,
     onLeave: function (origin, destination, direction) {
@@ -144,6 +144,7 @@ emailjs.init('user_POR39bXPijNQbLqbwejqJ')
 $('#submitButton').on('click', sendmail);
 
 function sendmail() {
+
     event.preventDefault();
     let name = $('#name').val();
     let gender = $('#gender').val();
@@ -159,15 +160,39 @@ function sendmail() {
         "phone": phone,
         "message": comment
     }
+    console.log(name, phone)
+    if (name == '' || phone == '') {
+        alert('請填寫姓名和電話')
+        if (name == '') {
 
-    let service_id = "default_service";
-    let template_id = "testEmail";
-    let userID = "user_POR39bXPijNQbLqbwejqJ"
-    emailjs.send(service_id, template_id, templateParams, userID)
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-        })
-        .catch((error) => {
-            console.log('FAILED...', error);
-        })
+            $('#name').focus()
+        } else {
+
+            $('#phone').focus()
+        }
+    }
+    else {
+        let service_id = "default_service";
+        let template_id = "testEmail";
+        let userID = "user_POR39bXPijNQbLqbwejqJ"
+        $('.submitBtn p').text('Sending...')
+        $('.submitBtn').css('pointer-events', 'none')
+        emailjs.send(service_id, template_id, templateParams, userID)
+            .then((response) => {
+                $('.submitBtn p').html('品牌行銷規劃 <i class="fas fa-play"></i>')
+                $('.submitBtn').css('pointer-events', 'all')
+                alert('感謝您的來信,我們會盡快與您聯繫')
+                $('#name').val('');
+                $('#gender').val('');
+                $('#company').val('');
+                $('#email').val('');
+                $('#phone').val('');
+                $('#comment').val('');
+                console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((error) => {
+                console.log('FAILED...', error);
+            })
+    }
+
 }

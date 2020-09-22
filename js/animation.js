@@ -276,24 +276,7 @@ jQuery(document).ready(function () {
         }
 
 
-        var slider = new TimelineMax();
 
-        slider
-            .fromTo(".bannerBg", 0.8,
-                { height: '0%' },
-                { height: '100%' }, 0.2)
-            .fromTo(".swiper-pagination", 0.3,
-                { opacity: 0 },
-                { opacity: 1 }, 2)
-            .staggerFromTo(".swiper-pagination span", 0.5,
-                { opacity: 0, x: -10 },
-                { opacity: 1, x: 0 }, 0.1, '-=0.2')
-            .fromTo(".swiper-button-prev", 0.3,
-                { opacity: 0 },
-                { opacity: 1 })
-            .fromTo(".swiper-button-next", 0.3,
-                { opacity: 0 },
-                { opacity: 1 }, '-=0.3')
 
 
 
@@ -318,34 +301,14 @@ jQuery(document).ready(function () {
                 prevEl: '.swiper-button-prev',
             },
 
-            // on: {
-
-            //     slideChangeTransitionEnd: function () {
-            //         console.log('test')
-            //         var slidermove = new TimelineMax();
-            //         slidermove
-            //             .fromTo(".swiper-slide .carousel_img>div", 0.1,
-            //                 { 'clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', '-webkit-clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
-            //                 { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' })
-            //             .fromTo(".swiper-slide .carousel_text h3", 0.5,
-            //                 { opacity: 0, y: -30 },
-            //                 { opacity: 1, y: 0 }, 1.2)
-            //             .fromTo(".swiper-slide .carousel_text p", 0.5,
-            //                 { opacity: 0, y: 30 },
-            //                 { opacity: 1, y: 0 }, '-=0.5')
-            //             .fromTo(".swiper-slide .carousel_text .carousel_line", 0.5,
-            //                 { opacity: 0, rotation: 0 },
-            //                 { opacity: 1, rotation: -30 }, '-=0.5')
-
-            //     },
-            // },
-
-
         })
         mySwiper.on('init', function () {
             console.log('init')
             var sliderInit = new TimelineMax();
             sliderInit
+                .fromTo(".bannerBg", 0.8,
+                    { height: '0%' },
+                    { height: '100%' }, 0.2)
                 .fromTo(".swiper-slide-active .carousel_img>div", 0.1,
                     { 'clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', '-webkit-clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
                     { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, 0.8)
@@ -358,12 +321,24 @@ jQuery(document).ready(function () {
                 .fromTo(".swiper-slide-active .carousel_text .carousel_line", 0.5,
                     { opacity: 0, rotation: 0 },
                     { opacity: 1, rotation: -30 }, '-=0.5')
+                .fromTo(".swiper-pagination", 0.3,
+                    { opacity: 0 },
+                    { opacity: 1 }, 2)
+                .staggerFromTo(".swiper-pagination span", 0.5,
+                    { opacity: 0, x: -10 },
+                    { opacity: 1, x: 0 }, 0.1, '-=0.2')
+                .fromTo(".swiper-button-prev", 0.3,
+                    { opacity: 0 },
+                    { opacity: 1 })
+                .fromTo(".swiper-button-next", 0.3,
+                    { opacity: 0 },
+                    { opacity: 1 }, '-=0.3')
         });
         mySwiper.init();
         mySwiper.on('slideChangeTransitionStart', function () {
             console.log('test')
             $('.swiper-slide .carousel_img>div').css('clip-path', 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)')
-            $('.swiper-slide .carousel_img>div').css('-webkit-clip-path', 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)')
+            $('.swiper-slide .carousel_img>div').css('-webkit-clip-path', 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', 0.1)
             $('.swiper-slide .carousel_text h3').css('opacity', '0')
             $('.swiper-slide .carousel_text p').css('opacity', '0')
             $('.swiper-slide .carousel_line').css('opacity', '0')
