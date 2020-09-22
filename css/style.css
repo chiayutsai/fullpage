@@ -1920,6 +1920,9 @@ left: 34%;
     .carousel_text{
         top: 50%;
     }
+    .socialSlider .carousel_text, .designSlider .carousel_text{
+        top: 45%;
+    }
     .carousel_text h3{
        
       width: 80%;
