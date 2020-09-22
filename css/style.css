@@ -1874,6 +1874,10 @@ pointer-events: ;
         font-size: 18px;
         left: -8px;
     }
+    .section.service.ADs{
+        padding-top: 72px;
+    }
+    
 }
 
 @media screen and (max-width:414px){
@@ -1937,6 +1941,9 @@ left: 34%;
         }
         #fp-nav{
             display: none !important;
+        }
+        .form_box{
+            width: 414px;
         }
 }
 
