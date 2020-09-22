@@ -1724,14 +1724,17 @@ pointer-events: ;
     .about_content{
         width: 80%;
     }
-    .about_content.openMore p.aboutText1,.about_content.openMore p.aboutText3{
+    .about_content p{
         transform:translateY(50px);
+    }
+    .about_content.openMore p.aboutText1,.about_content.openMore p.aboutText3{
+      
 
         opacity: 0;
        
      }
      .about_content.openMore p.aboutText2{
-         transform:translateY(50px);
+    
          opacity: 0;
       }
     .about_content p.moreText{
@@ -1874,7 +1877,7 @@ pointer-events: ;
         font-size: 18px;
         left: -8px;
     }
-    .section.service.ADs{
+    .section.service{
         padding-top: 72px;
     }
     
