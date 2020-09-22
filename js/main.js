@@ -68,7 +68,7 @@ $('.totop').click(function () {
 $('.navbar-toggler').click(function () {
     let url = window.location.href.split('#')[1];
     console.log(url)
-
+    $('.nav').css('opacity', '1')
     $('.' + url).addClass('rotateNav');
     $('#header').addClass('rotateNav');
     $('.' + url).removeClass('closeNav');
@@ -99,6 +99,7 @@ function onMouseScroll(e) {
     if (url == 'Homepage') {
         $('#fp-nav').css('display', 'none')
     }
+    $('.nav').css('opacity', '0')
     $('.navbar-toggler').css('display', 'block')
     $('.section').addClass('closeNav');
     $('#fp-nav ul li .fp-tooltip').css('color', '#333')
