@@ -1943,7 +1943,7 @@ left: 34%;
             display: none !important;
         }
         .form_box{
-            width: 414px;
+            width: 100%;
         }
 }
 
