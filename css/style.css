@@ -1437,10 +1437,7 @@ pointer-events: ;
         clip-path: polygon(60% 0, 100% 0, 100% 100%, 30% 100%);
         -webkit-clip-path:polygon(60% 0, 100% 0, 100% 100%, 30% 100%);
     }
-    .rotateNav{
-        transform:translateX(-150px) rotate(-20deg);
-       
-    }
+
     h3{
         font-size: 30px;
     }
@@ -1883,6 +1880,10 @@ pointer-events: ;
 }
 
 @media screen and (max-width:414px){
+    .rotateNav{
+        transform:translateX(-200px) rotate(-0deg);
+       
+    }
     .logo{
         width:55%;
     }
@@ -1936,6 +1937,9 @@ left: 34%;
             margin-left: auto;
             margin-right:7%;
             top:40px;
+        }
+        #fp-nav{
+            display: none !important;
         }
 }
 
@@ -2020,9 +2024,7 @@ left: 34%;
     select, option{
         margin-bottom: 15px;
     }
-    #fp-nav{
-        display: none !important;
-    }
+  
     .carousel_text h3{
        
        font-size: 36px;
