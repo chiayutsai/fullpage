@@ -12,7 +12,7 @@ var myFullpage = new fullpage('#fullpage', {
     navigationPosition: 'right',
     navigationTooltips: ['Homepage', 'ADs', 'SocialMarketing', 'SearchEngine', 'WebDesign', 'AboutUs', 'ChooseUs', 'mailForm', 'ContactUs'],
 
-    responsiveWidth: 577,
+    responsiveWidth: 770,
     onLeave: function (origin, destination, direction) {
         var leavingSection = this;
         console.log(destination.anchor)
@@ -113,13 +113,17 @@ function onMouseScroll(e) {
 var wdth = $(window).width();
 $(window).scroll(function () {
     var topVal = $(window).scrollTop();
-    if (topVal > 150 && wdth < 577) {
+    if (topVal > 150 && wdth < 770) {
         $('#header').css('background-color', 'rgba(255,255,255,0.8)');
-        $('.navbar-toggler').addClass('dark')
+        $('.navbar-toggler').addClass('dark');
+        $('.totop p').text('ToTop')
+        $('.totop ').removeClass('scroll')
 
     } else {
         $('.navbar-toggler').removeClass('dark')
         $('#header').css('background-color', 'transparent');
+        $('.totop p').text('SCROLL')
+        $('.totop ').addClass('scroll')
     }
 
 });
@@ -129,31 +133,41 @@ if (wdth <= 770) {
     $('.navbar-toggler').click(function () {
         $(this).css('display', 'none')
         $('.section').addClass('rotateNav');
+        $('#header').addClass('rotateNav');
         $('.section').removeClass('closeNav');
-
+        $('#header').removeClass('closeNav');
     })
 
 }
 
-var mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
+emailjs.init('user_POR39bXPijNQbLqbwejqJ')
+$('#submitButton').on('click', sendmail);
 
-    loop: true,
+function sendmail() {
+    event.preventDefault();
+    let name = $('#name').val();
+    let gender = $('#gender').val();
+    let company = $('#company').val();
+    let email = $('#email').val();
+    let phone = $('#phone').val();
+    let comment = $('#comment').val();
+    let templateParams = {
+        "name": name,
+        "gender": gender,
+        "company": company,
+        "email": email,
+        "phone": phone,
+        "message": comment
+    }
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-        },
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-
-})
+    let service_id = "default_service";
+    let template_id = "testEmail";
+    let userID = "user_POR39bXPijNQbLqbwejqJ"
+    emailjs.send(service_id, template_id, templateParams, userID)
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        })
+        .catch((error) => {
+            console.log('FAILED...', error);
+        })
+}

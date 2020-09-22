@@ -13,8 +13,8 @@ jQuery(document).ready(function () {
             textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
             tween1
                 .fromTo(".ADs .bg", 0.1,
-                    { 'clip-path': 'polygon(17% 0, 37% 0,37% 0, 17% 0)' },
-                    { 'clip-path': 'polygon(17% 0, 37% 0, 20% 100%, 0% 100%)' })
+                    { 'clip-path': 'polygon(17% 0, 37% 0,37% 0, 17% 0)', '-webkit-clip-path': 'polygon(17% 0, 37% 0,37% 0, 17% 0)' },
+                    { 'clip-path': 'polygon(17% 0, 37% 0, 20% 100%, 0% 100%)', '-webkit-clip-path': 'polygon(17% 0, 37% 0, 20% 100%, 0% 100%)' })
                 .fromTo(".ADs .bar", 0.5,
                     { rotation: -195, opacity: 0 },
                     { rotation: -15, opacity: 1 }, 0.3)
@@ -23,8 +23,8 @@ jQuery(document).ready(function () {
                     { opacity: 1, scale: 1, x: 0 },
                     0.1, '-=0.1')
                 .fromTo(".ADs .imgBox", 0.1,
-                    { 'clip-path': 'polygon(0 0, 0 0, 0 100%, 0 100%)' },
-                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.4')
+                    { 'clip-path': 'polygon(0 0, 0 0, 0 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 0 0, 0 100%, 0 100%)' },
+                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.4')
                 .fromTo(".ADs .decoration_text", 0.5,
                     { opacity: 0, y: 50 },
                     { opacity: 0.03, y: 0 }, 1.5)
@@ -47,8 +47,8 @@ jQuery(document).ready(function () {
             textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
             tween2
                 .fromTo(".SocialMarketing .bg", 0.1,
-                    { 'clip-path': 'polygon(80% 0, 100% 0, 100% 0,80% 0)' },
-                    { 'clip-path': 'polygon(80% 0, 100% 0, 83% 100%, 63% 100%)' })
+                    { 'clip-path': 'polygon(80% 0, 100% 0, 100% 0,80% 0)', '-webkit-clip-path': 'polygon(80% 0, 100% 0, 100% 0,80% 0)' },
+                    { 'clip-path': 'polygon(80% 0, 100% 0, 83% 100%, 63% 100%)', '-webkit-clip-path': 'polygon(80% 0, 100% 0, 83% 100%, 63% 100%)' })
                 .fromTo(".SocialMarketing .bar", 0.5,
                     { rotation: -195, opacity: 0 },
                     { rotation: -15, opacity: 1 }, 0.3)
@@ -57,8 +57,8 @@ jQuery(document).ready(function () {
                     { opacity: 1, scale: 1, x: 0 },
                     0.1, '-=0.1')
                 .fromTo(".SocialMarketing .imgBox", 0.1,
-                    { 'clip-path': ' polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
-                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.4')
+                    { 'clip-path': ' polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', '-webkit-clip-path': ' polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
+                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.4')
                 .fromTo(".SocialMarketing .decoration_text", 0.5,
                     { opacity: 0, y: 50 },
                     { opacity: 0.03, y: 0 }, 1.5)
@@ -80,11 +80,14 @@ jQuery(document).ready(function () {
             textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
             tween3
                 .fromTo(".SearchEngine .doubleBg1", 0.1,
-                    { 'clip-path': 'polygon(17% 5%, 37% 5%,37% 5%, 17% 5%)' },
-                    { 'clip-path': 'polygon(17% 5%, 37% 5%, 20% 100%, 0% 100%)' })
+                    { 'clip-path': 'polygon(17% 5%, 37% 5%,37% 5%, 17% 5%)', '-webkit-clip-path': 'polygon(17% 5%, 37% 5%,37% 5%, 17% 5%)' },
+                    {
+                        'clip-path': 'polygon(17% 5%, 37% 5%, 20% 100%, 0% 100%)',
+                        '-webkit-clip-path': 'polygon(17% 5%, 37% 5%, 20% 100%, 0% 100%)'
+                    })
                 .fromTo(".SearchEngine .doubleBg2", 0.1,
-                    { 'clip-path': 'polygon(22% 0, 42% 0, 42% 0, 22% 0)' },
-                    { 'clip-path': 'polygon(22% 0, 42% 0, 25% 95%, 5% 95%)' }, 0.2)
+                    { 'clip-path': 'polygon(22% 0, 42% 0, 42% 0, 22% 0)', '-webkit-clip-path': 'polygon(22% 0, 42% 0, 42% 0, 22% 0)' },
+                    { 'clip-path': 'polygon(22% 0, 42% 0, 25% 95%, 5% 95%)', '-webkit-clip-path': 'polygon(22% 0, 42% 0, 25% 95%, 5% 95%)' }, 0.2)
                 .fromTo(".SearchEngine .bar", 0.5,
                     { rotation: -195, opacity: 0 },
                     { rotation: -15, opacity: 1 }, 0.3)
@@ -93,8 +96,8 @@ jQuery(document).ready(function () {
                     { opacity: 1, scale: 1, x: 0 },
                     0.1, '-=0.1')
                 .fromTo(".SearchEngine .imgBox", 0.1,
-                    { 'clip-path': 'polygon(0 0, 0 0, 0 100%, 0 100%)' },
-                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.2')
+                    { 'clip-path': 'polygon(0 0, 0 0, 0 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 0 0, 0 100%, 0 100%)' },
+                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.2')
                 .fromTo(".SearchEngine .decoration_text", 0.5,
                     { opacity: 0, y: 50 },
                     { opacity: 0.03, y: 0 }, 1.5)
@@ -115,8 +118,8 @@ jQuery(document).ready(function () {
             textWrapper4.innerHTML = textWrapper4.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
             tween4
                 .fromTo(".WebDesign .bg", 0.1,
-                    { 'clip-path': 'polygon(80% 0, 100% 0, 100% 0,80% 0)' },
-                    { 'clip-path': 'polygon(80% 0, 100% 0, 83% 100%, 63% 100%)' })
+                    { 'clip-path': 'polygon(80% 0, 100% 0, 100% 0,80% 0)', '-webkit-clip-path': 'polygon(80% 0, 100% 0, 100% 0,80% 0)' },
+                    { 'clip-path': 'polygon(80% 0, 100% 0, 83% 100%, 63% 100%)', '-webkit-clip-path': 'polygon(80% 0, 100% 0, 83% 100%, 63% 100%)' })
                 .fromTo(".WebDesign .bar", 0.5,
                     { rotation: -195, opacity: 0 },
                     { rotation: -15, opacity: 1 }, 0.3)
@@ -125,8 +128,8 @@ jQuery(document).ready(function () {
                     { opacity: 1, scale: 1, x: 0 },
                     0.1, '-=0.1')
                 .fromTo(".WebDesign .imgBox", 0.1,
-                    { 'clip-path': ' polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
-                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.2')
+                    { 'clip-path': ' polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', '-webkit-clip-path': ' polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
+                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.2')
                 .fromTo(".WebDesign .decoration_text", 0.5,
                     { opacity: 0, y: 50 },
                     { opacity: 0.03, y: 0 }, 1.5)
@@ -181,8 +184,8 @@ jQuery(document).ready(function () {
             textWrapper6.innerHTML = textWrapper6.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
             tween6
                 .fromTo(".ChooseUs .bg", 0.1,
-                    { 'clip-path': 'polygon(25% 0, 45% 0, 45% 0%, 25% 0%)' },
-                    { 'clip-path': 'polygon(25% 0, 45% 0, 25% 100%, 5% 100%)' })
+                    { 'clip-path': 'polygon(25% 0, 45% 0, 45% 0%, 25% 0%)', '-webkit-clip-path': 'polygon(25% 0, 45% 0, 45% 0%, 25% 0%)' },
+                    { 'clip-path': 'polygon(25% 0, 45% 0, 25% 100%, 5% 100%)', '-webkit-clip-path': 'polygon(25% 0, 45% 0, 25% 100%, 5% 100%)' })
                 .fromTo(".ChooseUs .bar", 0.3,
                     { rotation: -195, opacity: 0 },
                     { rotation: -15, opacity: 1 }, 0.5)
@@ -191,14 +194,14 @@ jQuery(document).ready(function () {
                     { opacity: 1, scale: 1, x: 0 },
                     0.1, '-=0.1')
                 .fromTo(".choice_img", 0.1,
-                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)' },
-                    { 'clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.5')
+                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)' },
+                    { 'clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.5')
                 .fromTo(".box_img", 0.1,
-                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)' },
-                    { 'clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.5')
+                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)' },
+                    { 'clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.5')
                 .fromTo(".choice_mask", 0.1,
-                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)' },
-                    { 'clip-path': ' polygon(0 0, 60% 0, 40% 100%, 0 100%)' }, 1.5)
+                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)' },
+                    { 'clip-path': ' polygon(0 0, 60% 0, 40% 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 60% 0, 40% 100%, 0 100%)' }, 1.5)
 
                 .fromTo(".ChooseUs .archor", 0.5,
                     { opacity: 0, y: 20 },
@@ -218,12 +221,12 @@ jQuery(document).ready(function () {
 
             tween7
                 .fromTo(".triBg1", 0.1,
-                    { 'clip-path': 'polygon(100% 30%,100% 30%,100% 30%)' },
-                    { 'clip-path': 'polygon(100% 30%, 90% 100%, 100% 100%)' })
+                    { 'clip-path': 'polygon(100% 30%,100% 30%,100% 30%)', '-webkit-clip-path': 'polygon(100% 30%,100% 30%,100% 30%)' },
+                    { 'clip-path': 'polygon(100% 30%, 90% 100%, 100% 100%)', '-webkit-clip-path': 'polygon(100% 30%, 90% 100%, 100% 100%)' })
 
                 .fromTo(".triBg2", 0.1,
-                    { 'clip-path': 'polygon(100% 20%,100% 20%,100% 20%)' },
-                    { 'clip-path': 'polygon(100% 20%, 90% 90%, 100% 90%)' }, 0.1)
+                    { 'clip-path': 'polygon(100% 20%,100% 20%,100% 20%)', '-webkit-clip-path': 'polygon(100% 20%,100% 20%,100% 20%)' },
+                    { 'clip-path': 'polygon(100% 20%, 90% 90%, 100% 90%)', '-webkit-clip-path': 'polygon(100% 20%, 90% 90%, 100% 90%)' }, 0.1)
                 .fromTo(".form_box", 1,
                     { opacity: 0, y: 100 },
                     { opacity: 1, y: 0 }, 0.5)
@@ -243,12 +246,12 @@ jQuery(document).ready(function () {
             textWrapper8.innerHTML = textWrapper8.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
             tween8
                 .fromTo(".ContactUs .bg", 0.1,
-                    { 'clip-path': 'polygon(27% 0, 47% 0,47% 0, 27% 0)' },
-                    { 'clip-path': 'polygon(27% 0, 47% 0, 30% 85%, 10% 85%)' })
+                    { 'clip-path': 'polygon(27% 0, 47% 0,47% 0, 27% 0)', '-webkit-clip-path': 'polygon(27% 0, 47% 0,47% 0, 27% 0)' },
+                    { 'clip-path': 'polygon(27% 0, 47% 0, 30% 85%, 10% 85%)', '-webkit-clip-path': 'polygon(27% 0, 47% 0, 30% 85%, 10% 85%)' })
 
                 .fromTo(".trafficbg", 0.1,
-                    { 'clip-path': 'polygon( 58% 100%, 78% 100%, 78% 100%, 58% 100%)' },
-                    { 'clip-path': 'polygon(75% 10%, 95% 10%, 78% 100%, 58% 100%)' }, 0.1)
+                    { 'clip-path': 'polygon( 58% 100%, 78% 100%, 78% 100%, 58% 100%)', '-webkit-clip-path': 'polygon( 58% 100%, 78% 100%, 78% 100%, 58% 100%)' },
+                    { 'clip-path': 'polygon(75% 10%, 95% 10%, 78% 100%, 58% 100%)', '-webkit-clip-path': 'polygon(75% 10%, 95% 10%, 78% 100%, 58% 100%)' }, 0.1)
                 .fromTo(".ContactUs .bar", 0.3,
                     { rotation: -195, opacity: 0 },
                     { rotation: -15, opacity: 1 }, 0.3)
@@ -257,8 +260,8 @@ jQuery(document).ready(function () {
                     { opacity: 1, scale: 1, x: 0 },
                     0.1, '-=0.1')
                 .fromTo(".map", 0.1,
-                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%);' },
-                    { 'clip-path': 'polygon(0 0,100.5% 0%, 83% 100%, 0 100%)' }, '-=0.2')
+                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%);', '-webkit-clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%);' },
+                    { 'clip-path': 'polygon(0 0,100.5% 0%, 83% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0,100.5% 0%, 83% 100%, 0 100%)' }, '-=0.2')
                 .staggerFromTo(".map_Content p", 0.5,
                     { opacity: 0, x: -40 },
                     { opacity: 1, x: 0, delay: 0.5 }, 0.2)
@@ -276,25 +279,12 @@ jQuery(document).ready(function () {
         var slider = new TimelineMax();
 
         slider
-            .fromTo(".bannerBg", 0.5,
+            .fromTo(".bannerBg", 0.8,
                 { height: '0%' },
-                { height: '100%' }, 0.5)
-
-            .fromTo(".swiper-slide .carousel_img>div", 0.1,
-                { 'clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
-                { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' })
-            .fromTo(".swiper-slide-active .carousel_text h3", 0.5,
-                { opacity: 0, y: -30 },
-                { opacity: 1, y: 0 }, 2)
-            .fromTo(".swiper-slide-active .carousel_text p", 0.5,
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0 }, '-=0.5')
-            .fromTo(".swiper-slide-active .carousel_text .carousel_line", 0.5,
-                { opacity: 0, rotation: 0 },
-                { opacity: 1, rotation: -30 }, '-=0.5')
+                { height: '100%' }, 0.2)
             .fromTo(".swiper-pagination", 0.3,
                 { opacity: 0 },
-                { opacity: 1 }, '-=0.2')
+                { opacity: 1 }, 2)
             .staggerFromTo(".swiper-pagination span", 0.5,
                 { opacity: 0, x: -10 },
                 { opacity: 1, x: 0 }, 0.1, '-=0.2')
@@ -305,13 +295,95 @@ jQuery(document).ready(function () {
                 { opacity: 0 },
                 { opacity: 1 }, '-=0.3')
 
-            .fromTo("#header", 0.5,
-                { opacity: 0, y: -100 },
-                { opacity: 1, y: 0 })
 
 
 
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            init: false,
+            loop: true,
 
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // on: {
+
+            //     slideChangeTransitionEnd: function () {
+            //         console.log('test')
+            //         var slidermove = new TimelineMax();
+            //         slidermove
+            //             .fromTo(".swiper-slide .carousel_img>div", 0.1,
+            //                 { 'clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', '-webkit-clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
+            //                 { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' })
+            //             .fromTo(".swiper-slide .carousel_text h3", 0.5,
+            //                 { opacity: 0, y: -30 },
+            //                 { opacity: 1, y: 0 }, 1.2)
+            //             .fromTo(".swiper-slide .carousel_text p", 0.5,
+            //                 { opacity: 0, y: 30 },
+            //                 { opacity: 1, y: 0 }, '-=0.5')
+            //             .fromTo(".swiper-slide .carousel_text .carousel_line", 0.5,
+            //                 { opacity: 0, rotation: 0 },
+            //                 { opacity: 1, rotation: -30 }, '-=0.5')
+
+            //     },
+            // },
+
+
+        })
+        mySwiper.on('init', function () {
+            console.log('init')
+            var sliderInit = new TimelineMax();
+            sliderInit
+                .fromTo(".swiper-slide-active .carousel_img>div", 0.1,
+                    { 'clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', '-webkit-clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
+                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, 0.8)
+                .fromTo(".swiper-slide-active .carousel_text h3", 0.5,
+                    { opacity: 0, y: -30 },
+                    { opacity: 1, y: 0 }, 1.5)
+                .fromTo(".swiper-slide-active .carousel_text p", 0.5,
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0 }, '-=0.5')
+                .fromTo(".swiper-slide-active .carousel_text .carousel_line", 0.5,
+                    { opacity: 0, rotation: 0 },
+                    { opacity: 1, rotation: -30 }, '-=0.5')
+        });
+        mySwiper.init();
+        mySwiper.on('slideChangeTransitionStart', function () {
+            console.log('test')
+            $('.swiper-slide .carousel_img>div').css('clip-path', 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)')
+            $('.swiper-slide .carousel_img>div').css('-webkit-clip-path', 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)')
+            $('.swiper-slide .carousel_text h3').css('opacity', '0')
+            $('.swiper-slide .carousel_text p').css('opacity', '0')
+            $('.swiper-slide .carousel_line').css('opacity', '0')
+            var slidermove = new TimelineMax();
+            slidermove
+                .fromTo(".swiper-slide-active .carousel_img>div", 0.1,
+                    { 'clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', '-webkit-clip-path': 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)' },
+                    { 'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' })
+                .fromTo(".swiper-slide-active .carousel_text h3", 0.5,
+                    { opacity: 0, y: -30 },
+                    { opacity: 1, y: 0 }, 1)
+                .fromTo(".swiper-slide-active .carousel_text p", 0.5,
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0 }, '-=0.5')
+                .fromTo(".swiper-slide-active .carousel_text .carousel_line", 0.5,
+                    { opacity: 0, rotation: 0 },
+                    { opacity: 1, rotation: -30 }, '-=0.5')
+
+        });
+        // init Swiper
 
     });
 });
@@ -349,4 +421,3 @@ $('.more').click(function () {
             { opacity: 1, y: 0 }, '-=0.5')
 
 });
-
