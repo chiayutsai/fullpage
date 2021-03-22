@@ -5,31 +5,23 @@ jQuery(document).ready(function () {
 });
 
 var myFullpage = new fullpage('#fullpage', {
-    anchors: ['Homepage', 'ADs', 'SocialMarketing', 'SearchEngine', 'WebDesign', 'AboutUs', 'ChooseUs', 'mailForm', 'ContactUs'],
-
-
+    anchors: ['Homepage', 'ADs', 'SocialMarketing', 'SearchEngine', 'WebDesign', 'AboutUs', 'ChooseUs', 'Success', 'mailForm', 'ContactUs'],
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['首頁', '數位廣告行銷', '社群行銷', '搜尋引擎優化', '網頁設計製作', '關於凱斯東', '選擇凱斯東', '品牌行銷規劃', '聯絡我們'],
-
+    navigationTooltips: ['首頁', '數位廣告行銷', '社群行銷', '搜尋引擎優化', '網頁設計製作', '關於凱斯東', '選擇凱斯東', '成功案例', '品牌行銷規劃', '聯絡我們'],
     responsiveWidth: 770,
     onLeave: function (origin, destination, direction) {
         var leavingSection = this;
-        console.log(destination.anchor)
-
         if (destination.anchor != 'Homepage') {
             $('.totop p').text('ToTop')
             $('.totop ').removeClass('scroll')
             $('#fp-nav').css('display', 'block')
-            // $('#header').css('background-color', 'rgba(255,255,255,0.5)')
             $('.navbar-toggler').addClass('dark')
             $('.link-item').addClass('dark')
-
         } else {
             $('.totop p').text('SCROLL')
             $('.totop ').addClass('scroll')
             $('#fp-nav').css('display', 'none')
-
             $('.navbar-toggler').removeClass('dark')
             $('.link-item').removeClass('dark')
         }
@@ -38,18 +30,14 @@ var myFullpage = new fullpage('#fullpage', {
         } else {
             $('#header').css('background-color', 'transparent')
         }
-
-
     },
     afterResponsive: function (isResponsive) {
-
     }
 
 });
 
 /* url initialization */
 let url = window.location.href
-console.log(url.indexOf('#'))
 if (url.indexOf('#') < 0) {
     window.location.href = url + '#Homepage'
 
@@ -84,7 +72,6 @@ $('.navbar-toggler').click(function () {
 
 $('.more').click(function () {
     $('.about_content').toggleClass("openMore");
-
     $(this).toggleClass('open_btn')
 })
 
@@ -111,7 +98,7 @@ function onMouseScroll(e) {
     $('.navbar-nav').addClass('closeMenu')
     $('.navbar-nav').removeClass('openMenu')
 }
-var wdth = $(window).width();
+
 $(window).scroll(function () {
     var topVal = $(window).scrollTop();
     if (topVal > 150 && wdth < 770) {
@@ -128,8 +115,11 @@ $(window).scroll(function () {
     }
 
 });
-
-
+$(".option").click(function () {
+    $(".option").removeClass("active");
+    $(this).addClass("active");
+});
+var wdth = $(window).width();
 if (wdth <= 770) {
     $('.navbar-toggler').click(function () {
         $(this).css('display', 'none')
@@ -138,7 +128,10 @@ if (wdth <= 770) {
         $('.section').removeClass('closeNav');
         $('#header').removeClass('closeNav');
     })
-
+    $(".option").hover(function () {
+        $(".option").removeClass("active");
+        $(this).addClass("active");
+    });
 }
 
 emailjs.init('user_POR39bXPijNQbLqbwejqJ')

@@ -1,8 +1,7 @@
 var wdth = $(window).width();
-
 jQuery(document).ready(function () {
     jQuery(window).on('load', function () {  //load函数
-        if (wdth >= 770) {
+        if (wdth > 770) {
             var controller = new ScrollMagic.Controller();
 
 
@@ -193,7 +192,7 @@ jQuery(document).ready(function () {
                     { opacity: 0, scale: 0.5, x: -10 },
                     { opacity: 1, scale: 1, x: 0 },
                     0.1, '-=0.1')
-                .fromTo(".choice_img", 0.1,
+                .fromTo(".ChooseUs .choice_img", 0.1,
                     { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)' },
                     { 'clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.5')
                 .fromTo(".box_img", 0.1,
@@ -216,7 +215,39 @@ jQuery(document).ready(function () {
 
                 .addTo(controller); // trigger a TweenMax.to tween
 
+            var tween9 = new TimelineMax();
+            var textWrapper9 = document.querySelector('.success h3');
+            textWrapper9.innerHTML = textWrapper9.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+            tween9
+                .fromTo(".success .bg", 0.1,
+                    { 'clip-path': 'polygon(80% 0, 100% 0, 100% 0,80% 0)', '-webkit-clip-path': 'polygon(80% 0, 100% 0, 100% 0,80% 0)' },
+                    { 'clip-path': 'polygon(80% 0, 100% 0, 83% 100%, 63% 100%)', '-webkit-clip-path': 'polygon(80% 0, 100% 0, 83% 100%, 63% 100%)' })
+                .fromTo(".success .bar", 0.3,
+                    { rotation: -195, opacity: 0 },
+                    { rotation: -15, opacity: 1 }, 0.5)
+                .staggerFromTo(".success h3 span", 0.8,
+                    { opacity: 0, scale: 0.5, x: -10 },
+                    { opacity: 1, scale: 1, x: 0 },
+                    0.1, '-=0.1')
+                .fromTo(".success .choice_img", 0.1,
+                    { 'clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 0 0, 0 100%, 0 100%)' },
+                    { 'clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)', '-webkit-clip-path': ' polygon(0 0, 100% 0, 100% 100%, 0 100%)' }, '-=0.5')
 
+                .fromTo(".option", 0.5,
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0 })
+                .fromTo(".success .archor", 0.5,
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0 }, '-=0.2')
+
+            var scene9 = new ScrollMagic.Scene({
+                triggerElement: ".success ",
+                reverse: false,
+
+            })
+                .setTween(tween9)
+
+                .addTo(controller); // trigger a TweenMax.to tween
             var tween7 = new TimelineMax();
 
             tween7
@@ -273,13 +304,8 @@ jQuery(document).ready(function () {
                 .setTween(tween8)
 
                 .addTo(controller); // trigger a TweenMax.to tween
+
         }
-
-
-
-
-
-
 
         var mySwiper = new Swiper('.swiper-container', {
             // Optional parameters
